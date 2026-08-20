@@ -1,0 +1,52 @@
+:root {
+	color-scheme: light;
+	font-family: Georgia, 'Times New Roman', serif;
+	background: #f4efe6;
+	color: #1f2933;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	align-items: center;
+	background:
+		radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.8), transparent 28%),
+		linear-gradient(135deg, #f4efe6 0%, #e8e0d2 100%);
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 2rem;
+}
+
+main {
+	max-width: 42rem;
+	text-align: center;
+}
+
+p {
+	font-size: clamp(2.5rem, 8vw, 5.5rem);
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	line-height: 0.95;
+	margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	main {
+		animation: appear 700ms ease-out both;
+	}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+		transform: translateY(0.75rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
